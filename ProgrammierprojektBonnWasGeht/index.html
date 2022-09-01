@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>BonnWasGeht</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+</head>
+<body>
+    <div class="header">
+        <img src="images\Bonnwasgeht.png">
+    </div>
+    <div id="userdatacontainer">
+    <form onsubmit="saveUserData()" action="sections.html">
+		<h1>Los gehts!</h1>
+        <p>Finde heraus was du zur Zeit unternehmen kannst</p>
+		<div class="form-field input-right">
+		<label for="value"><a>Alter</a></label>
+			<input type="value" name="value" id="age" required/>
+		</div>
+		<div class="form-field multi-input">
+		<label for="dob"><a>Tag</a></label>
+			<select name="Wochentage" id="weekday" class="wochentag-select" required>
+				<option name="Montag">Montag</option>
+                <option name="Dienstag">Dienstag</option>
+                <option name="Mittwoch">Mittwoch</option>
+                <option name="Donnerstag">Donnerstag</option>
+                <option name="Freitag">Freitag</option>
+                <option name="Samstag">Samstag</option>
+                <option name="Sonntag">Sonntag</option>
+                
+			</select>
+		</div>
+		<div class="submit-field">
+		<input id="losgehts" type="submit" value="Los gehts!" onclick="sections.html"/>
+		</div>
+	</form>	
+    </div>
+    <div class="foot">
+    
+    </div>
+</body>
+</html>
