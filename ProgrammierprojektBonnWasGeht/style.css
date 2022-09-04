@@ -1,0 +1,165 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    height: 12vh;
+    background-color: #a4d0e6;
+    text-align: center;
+    padding:15px 0px 15px 0px;
+}
+
+.header img{
+    height: 100%;
+}
+
+#userdatacontainer{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.foot{
+    height: 12vh;
+    width: 100%;
+    background-color: #7abde7;
+    position:absolute;
+}
+
+.height {
+    height: 100px;
+    width: 100%;
+}
+
+
+
+form {
+    transform: scale(1.3);
+    display: flex;
+    flex-direction: column;
+	width: 70vh;
+    height: 55vh;
+    text-align: center;
+    justify-items: center;
+	padding: 2em;
+	background: #fff;
+	border-radius:0.25em;
+    margin-top: 25vh;
+}
+
+input, select {
+	padding:0.5em;
+	font-size:0.775em;
+	font-family:sans-serif;
+	background:#f4f4f4;
+	border:1px solid rgb(255, 255, 255);
+	border-width:1px 1px 1px 0;
+	border-radius:0;
+    
+}
+
+
+input:focus,
+select:focus {
+	background:#fff;
+	box-shadow:inset 0.1em 0.1em 0.25em rgba(0,0,0,0.2);
+	outline:0;
+}
+
+.form-field {
+	margin-bottom:1em;
+	display:flex;
+    
+}
+
+.form-field label {
+	flex:0 1 4em;
+	padding:1em;
+	background:#fff;
+	border:1px solid #ccc;
+	text-shadow:0 1px 0 #fff;
+	line-height:1;
+    height: 2em;
+    font-size:0.75em;
+}
+
+
+.form-field input,
+.form-field select {
+	flex-grow:1;
+	
+}
+
+.form-field label {
+	border-radius:0.25em 0 0 0.25em;
+}
+
+.input-right input,
+.input-right select,
+.multi-input input:last-child,
+.multi-input select:last-child {
+	border-radius:0 0.25em 0.25em 0;
+}
+
+.dob-select{
+	flex-basis: 0.2vh;
+	
+}
+
+
+input[type="submit"] {
+	flex:0 1 40%;
+	padding:0.8em;
+	font-size:1.2rem;
+	font-family:sans-serif;
+	text-shadow:0 1px 0 #fff;
+	background:#7abde7;
+	border-radius:0.25em;
+	border:0;
+	transition:0.3s;
+	cursor:pointer;
+}
+input[type="submit"]:hover {
+	color:#fff;
+}
+
+p{
+    font-family: sans-serif;
+}
+
+
+label{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+label a{
+    color: black;
+    padding: 0.5em 0px 0.5em 0px;
+}
+
+.losgehts{
+    display: flex;
+    justify-self: right;
+}
+
+.submit-field{
+    padding-top: 1%;
+}
+
+.sections{
+    width: 100%;
+    height: 90vh;
+}
+
+.ueberschrift{
+
+}
