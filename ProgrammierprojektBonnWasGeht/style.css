@@ -1,4 +1,5 @@
 body{
+    width: 100%;
     font-family: sans-serif;
     margin: 0;
     padding: 0;
@@ -6,7 +7,6 @@ body{
 }
 
 .header{
-    position: fixed;
     width: 100%;
     height: 12vh;
     background-color: #a4d0e6;
@@ -19,18 +19,19 @@ body{
 }
 
 #userdatacontainer{
-    height: 90vh;
+    height: 76vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center; 
+    position: relative;
+    top: -35px;
 }
 
 .foot{
     height: 12vh;
     width: 100%;
-    background-color: #7abde7;
-    position:absolute;
+    background-color: #a4d0e6;
+
 }
 
 .height {
@@ -45,13 +46,14 @@ form {
     display: flex;
     flex-direction: column;
 	width: 70vh;
-    height: 55vh;
+    height: 30vh;
     text-align: center;
     justify-items: center;
 	padding: 2em;
 	background: #fff;
 	border-radius:0.25em;
-    margin-top: 25vh;
+    padding-top: 0cm;
+
 }
 
 input, select {
@@ -156,10 +158,83 @@ label a{
 }
 
 .sections{
+    margin-top: 0;
+    height: 76vh;
     width: 100%;
-    height: 90vh;
+    margin: 0px;
+    position: relative;
+    background-color: #a4d0e6;
 }
 
-.ueberschrift{
+#section1{
+    z-index: 3;
+    width: 22%;
+    height: 100%;
+    background-image:url("images/sportsection-1.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: #cccccc;
+    transform: skewX(-12deg);
+    position: absolute;
+    left: -4%;
+}
 
+#section1:hover{
+    transform: scaleX(1.5) skewX(-12deg); 
+}
+
+#section2{
+    z-index: 2;
+    width: 26%;
+    height: 100%;
+    background-color: rebeccapurple;
+    position: absolute;
+    left: 12%;
+    transform: skewX(6deg);
+}
+
+#section2:hover{
+    z-index: 10;
+}
+
+#section3{
+    z-index: 1;
+    width: 30%;
+    height: 100%;
+    background-color: royalblue;
+    position: absolute;
+    left: 36%;
+}
+
+#section3:hover{
+    z-index: 10;
+    transform: scaleX(1.2);
+}
+
+#section4{
+    z-index: 2;
+    width: 26%;
+    height: 100%;
+    background-color: rebeccapurple;
+    position: absolute;
+    left: 64%;
+    transform: skewX(-6deg);
+}
+
+#section4:hover{
+    transform: scaleX(1.4);
+}
+
+#section5{
+    z-index: 3;
+    width: 22%;
+    height: 100%;
+    background-color: aqua;
+    transform: skewX(-12deg);
+    position: absolute;
+    left: 83%;
+}
+
+#section5:hover{
+    transform: scaleX(1.6) skewX(-12deg);
 }
