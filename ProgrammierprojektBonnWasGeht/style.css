@@ -5,6 +5,15 @@ body{
     overflow: hidden;
 }
 
+@keyframes slide-in {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
 #userdatacontainer{
     height: 0;
     padding-bottom: 80vh;
@@ -33,6 +42,7 @@ form {
     padding-right: 2em;
 	background: #fff;
 	border-radius:0.25em;
+    animation: slide-in 1000ms;
    
 }
 
@@ -150,11 +160,9 @@ form h2{
     margin-bottom: 6px;
 }
 
-.header img{
-    display: none;
-}
 
-@media only screen and (max-width: 1000px) {
+
+@media only screen and (max-width: 900px) {
 
 .header{
     position: relative;
@@ -181,9 +189,29 @@ form h2{
     height: 100px;
     width: 100%;
 }
+}
 
+@media only screen and (min-width: 900px) {
+    .header img{
+        display: none;
+    }
 
+    .header, .foot{
+        display: none;
+    }
 
+    #userdatacontainer{
+        width: 50%;
+        padding-bottom: 100vh;
+        align-items: flex-end;
+    }
 
+    form{
+        transform: scale(1.1);
+    }
+    
+    .wrapper{
+        right: 0px;
+    }
 }
 
