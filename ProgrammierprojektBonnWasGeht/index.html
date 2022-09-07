@@ -14,32 +14,48 @@
     <div class="header">
         <a href="index.html"><img src="images\Bonnwasgeht.png"></a>
     </div>
-    <div id="userdatacontainer">
-        <div class="wrapper">
-            <form onsubmit="saveUserData()" action="sections.html">
-		    <h2>Los gehts!</h2>
-            <p>Finde heraus was du zur Zeit unternehmen kannst</p>
-		    <div class="form-field input-right">
-		    <label for="value"><a>Alter</a></label>
-			    <input type="value" name="value" id="age" required/>
-		    </div>
-		    <div class="form-field multi-input">
-		    <label for="dob"><a>Tag</a></label>
-			    <select name="Wochentage" id="weekday" class="wochentag-select" required>
-				    <option name="Montag">Montag</option>
-                    <option name="Dienstag">Dienstag</option>
-                    <option name="Mittwoch">Mittwoch</option>
-                    <option name="Donnerstag">Donnerstag</option>
-                    <option name="Freitag">Freitag</option>
-                    <option name="Samstag">Samstag</option>
-                    <option name="Sonntag">Sonntag</option>                
-			    </select>
-		    </div>
-		    <div class="submit-field">
-		    <input id="losgehts" type="submit" value="Los gehts!" onclick="sections.html"/>
-		    </div>
-	        </form>	
+    <div class="firstpageheader"></div>
+    <div class="seitenunterteilung">
+        <div class="leftside">
+            <div class="wrapper">
+                <div class="designleft">
+                    
+                    <img src="images\wolkenverlauf.png" alt="wolkenverlauf">
+                </div>
+            </div>
         </div>
+        <div id="userdatacontainer">
+            <div class="wrapper">
+                <form onsubmit="saveUserData()" action="sections.html">
+                <h2>Los gehts!</h2>
+                <p>Finde heraus was du zur Zeit unternehmen kannst</p>
+                <div class="form-field input-right">
+                <label for="value"><a>Alter</a></label>
+                    <input type="value" name="value" id="age" required/>
+                </div>
+                <div class="form-field multi-input">
+                <label for="dob"><a>Tag</a></label>
+                    <select name="Wochentage" id="weekday" class="wochentag-select" required>
+                        <option name="Montag">Montag</option>
+                        <option name="Dienstag">Dienstag</option>
+                        <option name="Mittwoch">Mittwoch</option>
+                        <option name="Donnerstag">Donnerstag</option>
+                        <option name="Freitag">Freitag</option>
+                        <option name="Samstag">Samstag</option>
+                        <option name="Sonntag">Sonntag</option>                
+                    </select>
+                </div>
+                <div class="submit-field">
+                <input id="losgehts" type="submit" value="Weiter" onclick="sections.html"/>
+                </div>
+                </form>	
+            </div>
+        </div>
+    </div>
+    <div class="firstpagedesigncomponentdiv">
+        <div class="firstpagedesigncomponenttriangle"></div>
+        <div class="firstpagedesigncomponent1"></div>
+        <div class="firstpagedesigncomponent2"></div>
     </div>
     <div class="foot">
     

@@ -10,7 +10,7 @@ body{
       transform: translateX(100%);
     }
     to {
-      transform: translateX(0%);
+      transform: translateX(0%), scale(1.2);
     }
   }
 
@@ -18,6 +18,7 @@ body{
     height: 0;
     padding-bottom: 80vh;
     position: relative;
+    padding-left: 0;
 }
 
 .wrapper{
@@ -107,7 +108,7 @@ select:focus {
 
 input[type="submit"] {
 	flex:0 1 40%;
-	padding: 0.8em 1.6em 0.8em 1.6em;
+	padding: 0.7em 1.8em 0.75em 1.8em;
 	font-size:1.2rem;
 	font-family:'Roboto';
 	text-shadow:0 1px 0 #fff;
@@ -173,6 +174,10 @@ form h2{
     padding:5px 0px 5px 0px;
 }
 
+.leftside, .designleft{
+    display: none;
+}
+
 .header img{
     height: 100%;
 }
@@ -192,6 +197,11 @@ form h2{
 }
 
 @media only screen and (min-width: 900px) {
+    .seitenunterteilung{
+        position: relative;
+        padding-bottom: 100vh;
+    }
+
     .header img{
         display: none;
     }
@@ -201,17 +211,79 @@ form h2{
     }
 
     #userdatacontainer{
-        width: 50%;
+        position: absolute;
         padding-bottom: 100vh;
-        align-items: flex-end;
+        padding-right: 50%;
+        right: 0;
     }
 
     form{
-        transform: scale(1.1);
+        transform: scale(1.2);
+        padding-left: 0px;
     }
     
     .wrapper{
         right: 0px;
     }
+
+    .leftside{
+        position: absolute;
+        padding-bottom: 100vh;
+        padding-right: 30px;
+        padding-left: 50%;
+        left: 0;
+    }
+
+    .designleft img[alt="wolkenverlauf"]{
+        max-width: 100%;
+    }
+
+    .designleft img[alt="logo"]{
+        padding-top: 18%;
+        padding-left: 8%;
+        position: absolute;
+        max-width: 32%;
+    }
+
+    .firstpagedesigncomponentdiv{
+        position: absolute;
+        bottom:0;
+        right:0;
+        height: 25vh;
+        width: 25vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .firstpagedesigncomponenttriangle{
+        position: absolute;
+        margin-top: 140%;
+        width: 100%;
+        height: 250%;
+        transform: rotate(45deg);
+        background-color: #edeff1;
+    }
+
+    .firstpagedesigncomponent1{
+        position: relative;
+        height: 200%;
+        width: 30px;
+        transform: rotate(45deg);
+        background-color: #a4d0e6;
+    }
+
+    .firstpagedesigncomponent2{
+        position: relative;
+        height: 200%;
+        width: 10px;
+        transform: rotate(45deg);
+        background-color: #63bdeb;    
+    }
+
+    
+   
 }
 
