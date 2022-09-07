@@ -249,7 +249,7 @@ form h2{
         position: absolute;
         bottom:0;
         right:0;
-        height: 25vh;
+        height: 20vh;
         width: 25vh;
         display: flex;
         align-items: center;
@@ -263,7 +263,7 @@ form h2{
         margin-top: 140%;
         width: 100%;
         height: 250%;
-        transform: rotate(45deg);
+        transform: rotate(55deg);
         background-color: #edeff1;
     }
 
@@ -271,19 +271,36 @@ form h2{
         position: relative;
         height: 200%;
         width: 30px;
-        transform: rotate(45deg);
+        transform: rotate(55deg);
         background-color: #a4d0e6;
     }
 
     .firstpagedesigncomponent2{
         position: relative;
         height: 200%;
-        width: 10px;
-        transform: rotate(45deg);
+        width: 6px;
+        transform: rotate(55deg);
         background-color: #63bdeb;    
     }
-
     
-   
+    .firstpageheader{
+        position: absolute;
+        z-index: 1;
+        background-image: linear-gradient(to top, white 0%, #a4d0e6 60%), linear-gradient(to right, white 0%, #a4d0e6 70%);
+        width: 64%;
+        padding-bottom: 9vh;
+        right: 0;
+    }
+
+    .firstpageheader1{
+        position: absolute;
+        z-index: 2;
+        right: 58%;
+        top: 0;
+        width: 10%;
+        padding-bottom: 20vh;
+        transform: rotate(-45deg);
+        background-color: white;
+    }
 }
 
