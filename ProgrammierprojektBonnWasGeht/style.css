@@ -16,7 +16,7 @@ body{
 
 #userdatacontainer{
     height: 0;
-    padding-bottom: 80vh;
+    padding-bottom: 70vh;
     position: relative;
     padding-left: 0;
 }
@@ -164,14 +164,27 @@ form h2{
 
 
 @media only screen and (max-width: 900px) {
+.header1{
+    display:none;
+}
 
+.firstpageheader{
+    display: none;
+}
 .header{
-    position: relative;
+    position: absolute;
     width: 100%;
-    height: 10vh;
+    height: 15vh;
     background-color: #a4d0e6;
     text-align: center;
     padding:5px 0px 5px 0px;
+    top:0;
+}
+
+#userdatacontainer{
+    position: absolute;
+    top: 15vh;
+    padding-left: 100%;
 }
 
 .leftside, .designleft{
@@ -179,34 +192,54 @@ form h2{
 }
 
 .header img{
-    height: 100%;
+    padding: 2.5vh;
+    height: 65%;
 }
 
-
 .foot{
-    height: 10vh;
+    height: 15vh;
     width: 100%;
     background-color: #a4d0e6;
-    position:relative;
+    position:absolute;
+    bottom: 0;
 }
 
 .height {
     height: 100px;
     width: 100%;
 }
+.skylinediv{
+    display: none;
+}
+.stadtplandiv{
+    display: none;
+}
 }
 
 @media only screen and (min-width: 900px) {
+  
     .seitenunterteilung{
         position: relative;
         padding-bottom: 100vh;
     }
 
-    .header img{
+    .header{
         display: none;
     }
 
-    .header, .foot{
+    .header1{
+        position: absolute;
+        align-self: center;
+        top: 2vh;
+        z-index: 22;
+        padding-right: 28px;
+    }
+
+    .header1 img{
+        max-height: 6vh;
+    }
+
+    .foot{
         display: none;
     }
 
@@ -244,6 +277,20 @@ form h2{
         position: absolute;
         max-width: 32%;
     }
+
+    .skylinediv img[alt="bonnskyline"]{
+        position: relative;
+        max-width: 60vh;
+    }
+
+    .skylinediv{
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        
+        padding: 0;
+    }
+
 
     .firstpagedesigncomponentdiv{
         position: absolute;
@@ -284,23 +331,121 @@ form h2{
     }
     
     .firstpageheader{
+    
         position: absolute;
-        z-index: 1;
-        background-image: linear-gradient(to top, white 0%, #a4d0e6 60%), linear-gradient(to right, white 0%, #a4d0e6 70%);
-        width: 64%;
-        padding-bottom: 9vh;
         right: 0;
+        top: 0;
+        z-index: 20;
     }
 
-    .firstpageheader1{
-        position: absolute;
-        z-index: 2;
-        right: 58%;
-        top: 0;
-        width: 10%;
-        padding-bottom: 20vh;
-        transform: rotate(-45deg);
-        background-color: white;
+    .firstpageheader img{
+        max-width: 100%;
     }
+
+
+    .stadtplandiv img[alt="stadtplan"]{
+        max-height: 30vh;
+    }
+    
+    .stadtplandiv{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding-left: 5vh;
+        padding-top: 5vh;
+    }
+    
+
+    .widget
+    {
+    position: absolute;
+    transform: scale(0.8);
+    left: 3vh;
+    top: 10vh;
+    width: 355px;
+    height: 125px;
+    margin: 150px auto;
+    background-color: #fcfdfd;
+    border-radius: 9px;
+    padding: 25px;
+    padding-right: 30px;
+    box-shadow: 0px 31px 35px -26px #080c21;
+    z-index: 25;
+    }
+      
+    .date
+    {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(0,0,0,0.5);
+    }
+    
+    .city
+    {
+    font-size: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 5px;
+    color: rgba(0,0,0,0.7);
+    }
+    
+    .temp
+    {
+    font-size: 81px;
+    color: rgba(0,0,0,0.9);
+    font-weight: 100;
+    }
+    
+    .panel
+    {
+    display: inline-block;
+    }
+    
+    .right-panel
+    {
+    position: absolute;
+    float: right;
+    top: 0;
+    margin-top: 35px;
+    padding-left: 10px;
+    }
+
+    .left-panel{
+        width: 154.92;
+    
+    }
+
+    
+    .marker{
+        position: relative;
+        z-index: 2;
+        font-size: 2.3em;
+        line-height: 120%;
+    }
+
+    .marker::before{
+        content:"";
+        background-color:royalblue;
+        width:117%;
+        height:1.4em;
+        position:absolute;
+        z-index:-1;
+        filter:url(#marker-shape);  
+        left: -0.4em;
+        bottom: -0.2em;
+       
+    }
+
+    .markerquestion{
+        transform: scale(1.05);
+        position: absolute;
+        left: 8.5vh;
+        top: 6vh;
+        font-family: 'Playfair Display';
+        font-weight:500;
+        color: white;
+        z-index: 20;     
+    }
+
 }
 

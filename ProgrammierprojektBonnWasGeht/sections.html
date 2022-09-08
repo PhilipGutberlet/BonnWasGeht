@@ -6,12 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BonnWasGeht</title>
     <link rel="stylesheet" href="style.css">
+    <svg xmlns="//www.w3.org/2000/svg" version="1.1" class="svg-filters" style="display:none;">
+        <defs>
+          <filter id="marker-shape">
+            <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
+            <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+          </filter>
+        </defs>
+      </svg>
 </head>
 <body>
     <div class="header">
         <a href="index.html"><img src="images\Bonnwasgeht.png"></a>
     </div>
-    <div class="sections"></div>
+    <div class="leftside">
+        <div class="wrapper">
+            <div class="designleft">
+                
+                <img src="images\wolkenverlauf.png" alt="wolkenverlauf">
+            </div>
+        </div>
+    </div>
+    <div class="markerquestion"><span class="marker">Was würdest du gerne</span><br><span class="marker">am Dienstag</span><br><span class="marker">unternehmen?</span><br></div>
+    <div class="widget">          
+        <div class="left-panel panel">
+            <div class="date">
+                Monday, 20 Aug 2018
+            </div>
+            <div class="city">
+                Mumbai
+            </div>
+            <div class="temp">
+               <img src="https://codefrog.tech/cp/wp/ts.png" alt="" width="60">
+               27&deg;
+            </div>
+        </div>
+        <div class="right-panel panel">
+            <img src="https://codefrog.tech/cp/wp/mumbai.png" alt="" width="160">
+        </div>
+    </div>
+    <div class="skylinediv"><img src="images\bonnskyline.png" alt="bonnskyline"></div>
+    <div class="rechteseite">
+        <div class="sections">
+            <div class="higherhalf"></div>
+                <div class="sectionrestaurants"><img src="images/sectionrestaurant.png" alt="restaurant"></div>
+                <div class="sectionfeiern"><img src="images/sectionfeiern.png" alt="feiern"></div>
+                <div class="sectionkultur"><img src="images/sectionkultur.png" alt="kultur"></div>
+                <div class="sectionsport"><img src="images/sectionsport.png" alt="sport"></div>
+            <div class="lowehalf"></div>
+        </div>
+    </div>
     <div class="foot"></div>
 </body>
 </html>
