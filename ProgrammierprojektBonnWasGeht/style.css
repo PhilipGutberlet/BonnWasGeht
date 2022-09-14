@@ -253,6 +253,7 @@ form h2{
     form{
         transform: scale(1.2);
         padding-left: 0px;
+        z-index: 26;
     }
     
     .wrapper{
@@ -294,6 +295,7 @@ form h2{
 
     .firstpagedesigncomponentdiv{
         position: absolute;
+        z-index: -1;
         bottom:0;
         right:0;
         height: 20vh;
@@ -335,7 +337,7 @@ form h2{
         position: absolute;
         right: 0;
         top: 0;
-        z-index: 20;
+        z-index: 1;
     }
 
     .firstpageheader img{
@@ -349,6 +351,7 @@ form h2{
     
     .stadtplandiv{
         position: absolute;
+        z-index: 28;
         right: 0;
         bottom: 0;
         padding-left: 5vh;
@@ -356,8 +359,8 @@ form h2{
     }
     
 
-    .widget
-    {
+    .widget{
+    display: none;
     position: absolute;
     transform: scale(0.8);
     left: 3vh;
@@ -447,5 +450,130 @@ form h2{
         z-index: 20;     
     }
 
+    .rechteseite{
+        z-index: 29;
+        position: absolute;
+        width: 60%;
+        height: 100%;
+        right: 0;
+        display: flex;
+    }
+
+    .sections{
+        position: absolute;       
+        height: 50vh;
+        width: 95%;
+        left: 0;
+        align-self: center;
+    }
+
+    .higherhalf{
+        position: absolute;
+        height: 50%;
+        width: 100%;
+        top: 0;
+    }
+
+    .lowerhalf{
+        position: absolute;
+        height: 50%;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .righthalf{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        width: 50%; 
+        height: 100%;
+        right: 0;
+    }
+
+    .lefthalf{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        left: 0;
+    }
+
+    .lefthalf div{
+        position: absolute;
+        display: inline-block;
+        background-color: white;
+        margin: 10% 0% 10% 0;
+        display: flex;
+        align-items: center;
+        left: 0;
+        right: 10px;
+        height: 80%;
+        width: 100%;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+    .righthalf div{
+        position: absolute;
+        display: inline-block;
+        background-color: white;
+        margin: 10% 0% 10% 0%;
+        display: flex;
+        align-items: center;
+        left: 10px;
+        height: 80%; 
+        width: 100%;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+
+    img[alt="restaurant"],img[alt="feiern"],img[alt="kultur"],img[alt="sport"]{
+        max-height: 90%;
+        left: 0;
+        margin: 10px;
+    }
+
+    .lefthalf div a, .righthalf div a{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .events{
+        position: absolute;
+        z-index: 30;
+        height: 80vh;
+        right: 10vh;
+        top: 10vh;
+        bottom: 10vh;
+        width: 50vw;
+        overflow: auto;
+    }
+
+    .eventslot{
+        width: 98%;
+        height: 15vh;
+        background-color: #ccc;
+    }
+
+    img[alt="event"]{
+        height: 90%;
+        margin:5px;
+        float:left;
+    }
+
+    .titelu{
+        height: 85%;
+        margin:7px;
+        width: 60%;
+        float: left;
+        background-color: red;
+    }
+
+    .zeiten{
+        height: 85%;
+        margin:7px;
+        float: right;
+        background-color: red;
+        width: 15%;
+    }
 }
 
