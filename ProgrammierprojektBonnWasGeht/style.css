@@ -155,7 +155,7 @@ label a{
 }
 
 form h2{
-    font-family: 'Playfair Display';
+    font-family: 'Merriweather', serif;
     font-weight: bold;
     font-size: 35px;
     margin-bottom: 6px;
@@ -189,6 +189,7 @@ form h2{
 
 .leftside, .designleft{
     display: none;
+    
 }
 
 .header img{
@@ -268,6 +269,10 @@ form h2{
         left: 0;
     }
 
+    .designleft{
+        z-index: 5;
+    }
+
     .designleft img[alt="wolkenverlauf"]{
         max-width: 100%;
     }
@@ -343,7 +348,7 @@ form h2{
     .firstpageheader img{
         max-width: 100%;
     }
-
+    
 
     .stadtplandiv img[alt="stadtplan"]{
         max-height: 30vh;
@@ -418,37 +423,37 @@ form h2{
     
     }
 
-    
-    .marker{
-        position: relative;
-        z-index: 2;
-        font-size: 2.3em;
-        line-height: 120%;
-    }
-
-    .marker::before{
-        content:"";
-        background-color:royalblue;
-        width:117%;
-        height:1.4em;
-        position:absolute;
-        z-index:-1;
-        filter:url(#marker-shape);  
-        left: -0.4em;
-        bottom: -0.2em;
-       
-    }
-
-    .markerquestion{
-        transform: scale(1.05);
+    .neumorphism{
         position: absolute;
-        left: 8.5vh;
-        top: 6vh;
-        font-family: 'Playfair Display';
-        font-weight:500;
-        color: white;
-        z-index: 20;     
+        top: 30px;
+        left: 30px;
+        width: 500px;
+        height: 170px;
+        /*border-radius: 54px;
+        background: #a4d0e6;
+        box-shadow:  10px 10px 36px #97bfd4,
+             -10px -10px 36px #b1e1f8;*/
+         z-index: 6;
     }
+
+    .css-3d-text {
+        font-size: 55px;
+        padding-left: 36px;
+        padding-top: 15px;
+        line-height: 100%;
+        color: #a4d0e6;
+        font-family: "Arial Black", Gadget, sans-serif;
+        color: #69cdff;
+        font-family: "Arial Black", Gadget, sans-serif;
+        text-shadow: 0px 0px 0 rgb(88,188,238),
+                     -1px -1px 0 rgb(72,172,222),
+                     -2px -2px 0 rgb(55,155,205),
+                     -3px -3px  0 rgb(38,138,188),
+                     -4px -4px 3px rgba(0,0,0,0.6),
+                     -4px -4px 1px rgba(0,0,0,0.5),
+                     0px 0px 3px rgba(0,0,0,.2);
+        z-index: 6;
+     }
 
     .rechteseite{
         z-index: 29;
@@ -546,12 +551,22 @@ form h2{
         bottom: 10vh;
         width: 50vw;
         overflow: auto;
+        overflow-x: hidden;
     }
 
     .eventslot{
         width: 98%;
         height: 15vh;
-        background-color: #ccc;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+    }
+
+    .eventslot:hover>.titelu span{
+        color: royalblue;
+        background: linear-gradient(to bottom, transparent 65%, #a4d0e6 35%);
     }
 
     img[alt="event"]{
@@ -561,19 +576,50 @@ form h2{
     }
 
     .titelu{
-        height: 85%;
-        margin:7px;
+        height: 90%;
+        margin:5px;
+        margin-top: 7px;
         width: 60%;
         float: left;
-        background-color: red;
+    }
+
+    .titelu span{
+        font-family: 'Merriweather', serif;
+        font-weight: bold;
+        font-size: 30px;
+        white-space: nowrap;
+        margin: 7px;
+        height: 20px;
+        margin-bottom: 24px;
+    }
+
+    .titelu p{
+        margin: 7px;  
+        font-family: 'Roboto';
+        color: #747474;
+        width: 95%;
+        padding-bottom: 0;  
+        margin-bottom: 0;
+        margin-top: 8px;
+        height: 40px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
     }
 
     .zeiten{
         height: 85%;
         margin:7px;
         float: right;
-        background-color: red;
         width: 15%;
     }
+
+    .zeiten p{
+        margin-top: 8px;
+        color: royalblue;
+    }
+
 }
 
