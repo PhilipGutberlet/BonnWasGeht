@@ -1,21 +1,13 @@
-let button = document.getElementById("losghets");
-button.addEventListener("click", machWas());
 
-function machWas(event){
-        event.preventDefault();
-        let weekday=document.getElementById("weekday");
-        console.log(weekday.value);
+
+function saveUserData(){   
+    let weekday = document.getElementById('weekday').value;
+    localStorage.setItem('weekday', weekday);
+    
 }
 
-/*function saveUserData(){
-    event.preventDefault();
-    let weekday = document.getElementById('weekday').ariaValueMax;
-    console.log(weekday)
-    
-}*/
-
-function getWeekday(){
-    return sessionStorage.getItem('weekday');
+function loadsectionpage(){
+    document.getElementById('varweekday').innerHTML = localStorage.getItem('weekday');
 }
 
 
