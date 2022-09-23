@@ -10,16 +10,20 @@
     <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="userdataformular.js"></script>
 </head>
 
     <div class="header">
         <a href="index.html"><img src="images\Bonnwasgeht.png"></a>
     </div>
     <div class="firstpageheader"><img src="images\verlaufswerkzeug.png" alt="verlauf"></div>
-    <div class="neumorphism"><div class="css-3d-text">WAS GEHT DIESE WOCHE IN BONN?</div></div>
+    <div class="mainbox"><div class="css-3d-text-red ind">Was geht diese <br>Woche in Bonn?</div></div>
+    <div class="backgroundbox1"></div>
+    <div class="backgroundbox2"></div>
     <div class="seitenunterteilung">
         <div class="leftside">
             <div class="wrapper">
@@ -32,27 +36,27 @@
         <div id="userdatacontainer">
             <div class="wrapper">
                 <div class="header1"><a href="index.html"><img src="images\Bonnwasgeht.png"></a></div>
-                <form onsubmit="saveUserData()" action="sections.html">
-                <h2>Los gehts!</h2>
+                <form id="userform" onsubmit="userdataformular.saveUserData()" action="sections.html">
+                <div class="css-3d-text-blue">Los gehts!</div>
                 <p>Finde heraus was du zur Zeit unternehmen kannst</p>
                 <div class="form-field input-right">
                 <label for="value"><a>Alter</a></label>
-                    <input type="value" name="value" id="age" required/>
+                    <input type="value" name="value"  id="age" required/>
                 </div>
                 <div class="form-field multi-input">
                 <label for="dob"><a>Tag</a></label>
                     <select name="Wochentage" id="weekday" class="wochentag-select" required>
-                        <option name="Montag">Montag</option>
-                        <option name="Dienstag">Dienstag</option>
-                        <option name="Mittwoch">Mittwoch</option>
-                        <option name="Donnerstag">Donnerstag</option>
-                        <option name="Freitag">Freitag</option>
-                        <option name="Samstag">Samstag</option>
-                        <option name="Sonntag">Sonntag</option>                
+                        <option value="Montag">Montag</option>
+                        <option value="Dienstag">Dienstag</option>
+                        <option value="Mittwoch">Mittwoch</option>
+                        <option value="Donnerstag">Donnerstag</option>
+                        <option value="Freitag">Freitag</option>
+                        <option value="Samstag">Samstag</option>
+                        <option value="Sonntag">Sonntag</option>                
                     </select>
                 </div>
                 <div class="submit-field">
-                <input id="losgehts" type="submit" value="Weiter" onclick="sections.html"/>
+                <input id="losgehts" type="submit" value="Weiter" />
                 </div>
                 </form>	
             </div>

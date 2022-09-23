@@ -1,8 +1,9 @@
 body{
-    font-family: 'Roboto';
+    font-family: 'Merriweather',  serif;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    
 }
 
 @keyframes slide-in {
@@ -13,6 +14,15 @@ body{
       transform: translateX(0%), scale(1.2);
     }
   }
+p{
+    color: #5c5c5c;
+    font-family: 'Roboto';
+}
+
+a{
+    color: #5c5c5c;
+    font-family: 'Roboto';
+}
 
 #userdatacontainer{
     height: 0;
@@ -37,6 +47,7 @@ form {
     flex-direction: column;
     width: 60vh;
     text-align: center;
+    margin-top: 10vh;
 	padding-top: 0;
     padding-bottom: 5em;
     padding-left: 2em;
@@ -50,7 +61,8 @@ form {
 input, select {
 	padding:0.5em;
 	font-size:0.775em;
-	font-family:'Roboto';
+	font-family: 'Roboto';
+    color: #5c5c5c;
 	background:#f4f4f4;
 	border:1px solid rgb(255, 255, 255);
 	border-width:1px 1px 1px 0;
@@ -122,19 +134,21 @@ input[type="submit"]:hover {
 	color:#fff;
 }
 
-p{
+form p{
+    margin-top: 5px;
     font-family: 'Roboto'
 }
 
 
 label{
+    color: #5c5c5c;
     font-family: 'Roboto';
     display: flex;
     justify-content: center;
 }
 
 label a{
-    color: black;
+    color: #5c5c5c;
     padding: 0.5em 0px 0.5em 0px;
 }
 
@@ -152,11 +166,12 @@ label a{
     position: relative;
     width: 100%;
     height: 80vh;
+    animation: slide-in 1000ms;
 }
 
 form h2{
-    font-family: 'Merriweather', serif;
-    font-weight: bold;
+    font-family: 'Playfair Display';
+    font-weight: 900;
     font-size: 35px;
     margin-bottom: 6px;
 }
@@ -233,7 +248,7 @@ form h2{
         align-self: center;
         top: 2vh;
         z-index: 22;
-        padding-right: 28px;
+        padding-right: 40px;
     }
 
     .header1 img{
@@ -423,45 +438,57 @@ form h2{
     
     }
 
-    .neumorphism{
+    .mainbox{
+        z-index: 35;
         position: absolute;
-        top: 30px;
-        left: 30px;
-        width: 500px;
-        height: 170px;
-        /*border-radius: 54px;
-        background: #a4d0e6;
-        box-shadow:  10px 10px 36px #97bfd4,
-             -10px -10px 36px #b1e1f8;*/
-         z-index: 6;
+        top: 40px;
+        left: 70px;
+        border-radius: 40px;
+         z-index: 7;
+         
     }
 
-    .css-3d-text {
-        font-size: 55px;
-        padding-left: 36px;
-        padding-top: 15px;
-        line-height: 100%;
+    .css-3d-text-red{
+        color: #e6baa4;
+        line-height: 110%;
+        font-family: Impact, Charcoal, sans-serif;
+        text-shadow: 0px 0px 0 rgb(180,136,114),
+                     -1px 1px  0 rgb(130,86,64),
+                     -2px 2px 1px rgba(238,100,82,0.6),
+                     -2px 2px 1px rgba(238,100,82,0.5),
+                     0px 0px 1px rgba(238,100,82,.2);
+    }   
+
+    .sec{
+        font-size: 60px;
+    }
+
+    .ind{
+        font-size: 65px;
+    }
+    
+    .css-3d-text-blue{
+        font-size: 40px;
+        line-height: 110%; 
         color: #a4d0e6;
-        font-family: "Arial Black", Gadget, sans-serif;
-        color: #69cdff;
-        font-family: "Arial Black", Gadget, sans-serif;
-        text-shadow: 0px 0px 0 rgb(88,188,238),
-                     -1px -1px 0 rgb(72,172,222),
-                     -2px -2px 0 rgb(55,155,205),
-                     -3px -3px  0 rgb(38,138,188),
-                     -4px -4px 3px rgba(0,0,0,0.6),
-                     -4px -4px 1px rgba(0,0,0,0.5),
-                     0px 0px 3px rgba(0,0,0,.2);
-        z-index: 6;
+        font-family: Impact, Charcoal, sans-serif;
+        text-shadow: 0px 0px 0 rgb(114,158,180),
+                    -1px 1px  0 rgb(64,108,130),
+                    -2px 2px 1px rgba(47,84,135,0.6),
+                    -2px 2px 1px rgba(47,84,135,0.5),
+                    0px 0px 1px rgba(47,84,135,.2);
      }
+
 
     .rechteseite{
         z-index: 29;
         position: absolute;
         width: 60%;
         height: 100%;
+        top: 0;
         right: 0;
         display: flex;
+        justify-content: center;
     }
 
     .sections{
@@ -581,6 +608,7 @@ form h2{
         margin-top: 7px;
         width: 60%;
         float: left;
+        padding-top: 10px;
     }
 
     .titelu span{
@@ -601,7 +629,7 @@ form h2{
         padding-bottom: 0;  
         margin-bottom: 0;
         margin-top: 8px;
-        height: 40px;
+        
         text-overflow: ellipsis;
         overflow: hidden;
         display: -webkit-box;
