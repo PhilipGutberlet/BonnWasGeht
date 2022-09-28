@@ -39,22 +39,16 @@
                 <form id="userform" onsubmit="saveUserData()" action="sections.html" >
                 <div class="css-3d-text-blue">Los gehts!</div>
                 <p>Finde heraus was du zur Zeit unternehmen kannst</p>
-                <div class="form-field input-right">
-                <label for="value"><a>Alter</a></label>
-                    <input type="value" name="value"  id="age" required/>
-                </div>
-                <div class="form-field multi-input">
-                <label for="dob"><a>Tag</a></label>
-                    <select name="Wochentage" id="weekday" class="wochentag-select" required>
-                        <option value="Montag">Montag</option>
-                        <option value="Dienstag">Dienstag</option>
-                        <option value="Mittwoch">Mittwoch</option>
-                        <option value="Donnerstag">Donnerstag</option>
-                        <option value="Freitag">Freitag</option>
-                        <option value="Samstag">Samstag</option>
-                        <option value="Sonntag">Sonntag</option>                
-                    </select>
-                </div>
+                <input type="value" name="value"  id="age" placeholder="Alter" required/>              
+                <select name="Wochentage" id="weekday" required>
+                    <option value="Montag">Montag</option>
+                    <option value="Dienstag">Dienstag</option>
+                    <option value="Mittwoch">Mittwoch</option>
+                    <option value="Donnerstag">Donnerstag</option>
+                    <option value="Freitag">Freitag</option>
+                    <option value="Samstag">Samstag</option>
+                    <option value="Sonntag">Sonntag</option>                
+                </select>               
                 <div class="submit-field">
                 <input id="losgehts" type="submit" value="Weiter" />
                 </div>

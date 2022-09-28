@@ -47,82 +47,14 @@ form {
     flex-direction: column;
     width: 60vh;
     text-align: center;
-    margin-top: 10vh;
-	padding-top: 0;
-    padding-bottom: 5em;
-    padding-left: 2em;
-    padding-right: 2em;
-	background: #fff;
-	border-radius:0.25em;
     animation: slide-in 1000ms;
    
 }
 
-input, select, textarea {
-	padding:0.5em;
-	font-size:0.775em;
-	font-family: 'Roboto';
-    color: #5c5c5c;
-	background:#f4f4f4;
-	border:1px solid rgb(255, 255, 255);
-	border-width:1px 1px 1px 0;
-	border-radius:0;
-    
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-	background:#fff;
-	box-shadow:inset 0.1em 0.1em 0.25em rgba(0,0,0,0.2);
-	outline:0;
-}
-
-.form-field {
-	margin-bottom:1em;
-	display:flex;
-    
-}
-
-.form-field label {
-	flex:0 1 4em;
-	padding:1em;
-	background:#fff;
-	border:1px solid #ccc;
-	text-shadow:0 1px 0 #fff;
-	line-height:1;
-    height: 2em;
-    font-size:0.75em;
-}
-
-
-.form-field input,
-.form-field select,
-.form-field textarea {
-	flex-grow:1;
-	
-}
-
-.form-field label {
-	border-radius:0.25em 0 0 0.25em;
-}
-
-.input-right input,
-.input-right select,
-.multi-input input:last-child,
-.multi-input select:last-child {
-	border-radius:0 0.25em 0.25em 0;
-}
-
-.dob-select{
-	flex-basis: 0.2vh;
-	
-}
 
 
 input[type="submit"] {
-	flex:0 1 40%;
-	padding: 0.7em 1.8em 0.75em 1.8em;
+	padding: 1em 2.2em 1em 2.2em;
 	font-size:1.2rem;
 	font-family:'Roboto';
 	text-shadow:0 1px 0 #fff;
@@ -136,33 +68,53 @@ input[type="submit"]:hover {
 	color:#fff;
 }
 
-form p{
-    margin-top: 5px;
-    font-family: 'Roboto'
+form input, form select {
+    margin: 2% 10% 0 10%; 
+    padding:5%;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #5c5c5c;
+    background: linear-gradient(bottom, rgba(255, 255, 255, 0) 99%, #5c5c5c 1%);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    color: #5c5c5c;
+}
+
+form input::placeholder{
+    color: #5c5c5c;
+}
+
+input:focus, select:focus{
+    outline: none;
+    background-size: 100% 100%;
 }
 
 
-label{
-    color: #5c5c5c;
+input:focus::-webkit-input-placeholder{
+    font-size: 11px;
+    -webkit-transform: translateY(-25px);
+    transform: translateY(-25px);
+    visibility: visible !important;
+}
+
+input::-webkit-input-placeholder, input, #ud_send{
+    transition: all 300ms ease-in-out;
+}
+
+form p{
+    margin: 5px;
+    margin-top: 15px;
     font-family: 'Roboto';
+    font-size: 20px;
+}
+
+
+.submit-field{
+    margin-top: 30px;
     display: flex;
     justify-content: center;
 }
 
-label a{
-    color: #5c5c5c;
-    padding: 0.5em 0px 0.5em 0px;
-}
-
-.losgehts{
-    display: flex;
-    justify-self: right;
-    padding: 32px;
-}
-
-.submit-field{
-    padding-top: 1%;
-}
 
 .sections{
     position: relative;
@@ -269,7 +221,6 @@ form h2{
     }
 
     form{
-        transform: scale(1.2);
         padding-left: 0px;
         z-index: 26;
     }
@@ -413,7 +364,7 @@ form h2{
     }
     
     .css-3d-text-blue{
-        font-size: 40px;
+        font-size: 55px;
         line-height: 110%; 
         color: #a4d0e6;
         font-family: Impact, Charcoal, sans-serif;
