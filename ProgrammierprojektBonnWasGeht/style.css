@@ -42,7 +42,7 @@ a{
     justify-content: center;
 }
 
-form {
+#userdatacontainer form {
     display: flex;
     flex-direction: column;
     width: 60vh;
@@ -51,7 +51,14 @@ form {
    
 }
 
+textarea::-webkit-scrollbar{
+    width: 0;
+}
 
+textarea{
+    resize: none;
+    overflow: auto;
+}
 
 input[type="submit"] {
 	padding: 1em 2.2em 1em 2.2em;
@@ -68,36 +75,65 @@ input[type="submit"]:hover {
 	color:#fff;
 }
 
-form input, form select {
+form input[type="value"], form select, form textarea {
     margin: 2% 10% 0 10%; 
     padding:5%;
     display: block;
     border: none;
-    border-bottom: 1px solid #5c5c5c;
+    border-bottom: 1px solid #dadada;
     background: linear-gradient(bottom, rgba(255, 255, 255, 0) 99%, #5c5c5c 1%);
     background-size: 0 100%;
     background-repeat: no-repeat;
     color: #5c5c5c;
 }
 
-form input::placeholder{
+#eventform input[type="text"], #eventform select, #eventform textarea {
+    margin: 2% 10% 0 0%; 
+    padding:5%;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #dadada;
+    background: linear-gradient(bottom, rgba(255, 255, 255, 0) 99%, #5c5c5c 1%);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    color: #5c5c5c;
+}
+#eventform input[type="time"], #eventform input[type="date"]{
+    margin: 0;
+    padding:5%;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #dadada;
+    background: linear-gradient(bottom, rgba(255, 255, 255, 0) 99%, #5c5c5c 1%);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    color: #dadada;
+}
+
+
+
+form input[type="text"]::placeholder,form input[type="time"]::placeholder, form textarea::placeholder{
+    color: #dadada;
+}
+
+#userform input[type="value"]{
     color: #5c5c5c;
 }
 
-input:focus, select:focus{
+input:focus[type="time"], input:focus[type="value"], input:focus[type="text"], select:focus, textarea:focus{
     outline: none;
     background-size: 100% 100%;
 }
 
 
-input:focus::-webkit-input-placeholder{
+input:focus[type="time"]::-webkit-input-placeholder, input:focus[type="value"]::-webkit-input-placeholder, input:focus[type="text"]::-webkit-input-placeholder{
     font-size: 11px;
     -webkit-transform: translateY(-25px);
     transform: translateY(-25px);
     visibility: visible !important;
 }
 
-input::-webkit-input-placeholder, input, #ud_send{
+input[type="value"]::-webkit-input-placeholder, input[type="text"]::-webkit-input-placeholder, input[type="text"], input[type="value"], #ud_send{
     transition: all 300ms ease-in-out;
 }
 
@@ -129,6 +165,7 @@ form h2{
     font-size: 35px;
     margin-bottom: 6px;
 }
+
 
 
 
@@ -465,7 +502,7 @@ form h2{
         height: 100%;
     }
     
-    .events{
+    #events{
         position: absolute;
         z-index: 30;
         height: 80vh;
@@ -475,7 +512,26 @@ form h2{
         width: 50vw;
         overflow: auto;
         overflow-x: hidden;
+        
     }
+
+    .style-1::-webkit-scrollbar-track{
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+         border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+
+    .style-1::-webkit-scrollbar{
+        width: 0px;
+        background-color: #F5F5F5;
+    }
+
+    .style-1::-webkit-scrollbar-thumb{
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #dadada;
+    }
+
 
     .eventslot{
         width: 98%;
@@ -504,7 +560,7 @@ form h2{
         margin-top: 7px;
         width: 60%;
         float: left;
-        padding-top: 10px;
+        padding-top: 20px;
     }
 
     .titelu span{
@@ -514,7 +570,7 @@ form h2{
         white-space: nowrap;
         margin: 7px;
         height: 20px;
-        margin-bottom: 24px;
+        
     }
 
     .titelu p{
@@ -524,8 +580,8 @@ form h2{
         width: 95%;
         padding-bottom: 0;  
         margin-bottom: 0;
-        margin-top: 8px;
-        
+        margin-top: 18px;
+        font-size: 17px;
         text-overflow: ellipsis;
         overflow: hidden;
         display: -webkit-box;
@@ -547,10 +603,138 @@ form h2{
 
     #eventdatacontainer{
         position: absolute;
-        padding-bottom: 100vh;
-        padding-right: 70%;
-        right: 0;
-        height: 0;
+        background: white;
+        z-index: 30;
+        height: 80vh;
+        right: 10vh;
+        top: 10vh;
+        bottom: 10vh;
+        width: 50vw;
+        overflow: auto;
+        overflow-x: hidden;
+        
     }
+
+    #eventform{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    #titlecontainer{
+        display: flex;
+        width: 100%;
+        height: 8vh;
+    }
+    
+    .descriptionside{
+        font:left;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: top;
+        padding-left: 30px;
+        padding-top: 26px;
+        color: #5c5c5c;
+    }
+
+    .inputside{
+        float: right;
+        width: 50%;
+        height: 100%;
+        padding-right: 3%;
+    }
+
+    .divider{
+        width: 100%;
+        height: 1px;
+        background-color: #dadada;
+    }
+
+    #eventform p{
+        padding-bottom: 20px;
+    }
+
+    #shortdescriptioncontainer{
+        display: flex;
+        width: 100%;
+        height: 11vh;
+    }
+
+    textarea[name="shortdescription"]{
+        resize: none;
+    }
+
+    textarea[name="description"]{
+        resize: none;
+        height: 14vh;
+    }
+
+    .inputside input, .inputside textarea{
+        width: 90%;
+    }
+
+    #descriptioncontainer{
+        display: flex;
+        width: 100%;
+        height: 21vh;
+       
+    }
+
+    #imguploadcontainer{
+        width: 100%;
+        height: 20vh;
+    }
+
+    #dragarea{
+        margin: 2vh;
+        border: dashed #dadada 3px;
+        width: calc(100%-4vh);
+        height: 16vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #fileinput{
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 15vh;
+        outline: none;
+        opacity: 0;
+    }
+
+    .openedcontainer{
+        display: flex;
+        width: 100%;
+        height: 11vh;
+    }
+
+    .openedcontainer .inputside{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        color: #dadada;
+    }
+
+    .inputside input[type="time"], .inputside input[type="date"]{
+        width: 30%;
+    }
+
+    .timeinput{
+        margin: 0;
+        padding: 0;
+    }
+
+    .periodcontainer{
+        margin: 0;
+        padding: 0;
+        
+    }
+    
 }
+
 

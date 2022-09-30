@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="mainbox"><div class="css-3d-text-red sec">Mache dein Event <br> für andere aus <br> Bonn sichtbar!</div></div>
+    <div class="mainbox"><div class="css-3d-text-red sec">Mache dein <br> Event sichtbar <br> für andere!</div></div>
     <div class="leftside">
         <div class="wrapper">
             <div class="designleft">               
@@ -24,26 +24,60 @@
             </div>
         </div>
     </div>
-    <div id="eventdatacontainer">
+    <div id="eventdatacontainer" class="style-1">
         <div class="wrapper">
-            <form class="eventform">
-                <div class="form-field">
-                    <label for="value"><a>Titel</a></label>
-                        <input type="text" name="titel"  id="titel" required/>
+            <form id="eventform">
+                <div class="css-3d-text-blue">Event hochladen</div>
+                <p>Dazu einfach Formular ausfüllen </p>
+                <div class="divider"></div>
+                <div id="titlecontainer">
+                    <div class="descriptionside">Titel</div>
+                    <div class="inputside"><input type="text" name="title" id="title" placeholder="z.B Skybar Bonn" required></div>
                 </div>
-                <div class="form-field">
-                    <label for="value"><a>Kurze Beschreibung</a></label>
-                        <textarea name="shortdescription" cols="30" rows="2"></textarea>
+                <div class="divider"></div>
+                <div id="shortdescriptioncontainer">
+                    <div class="descriptionside">Füge eine kurze Beschreibung hinzu</div>
+                    <div class="inputside"><textarea name="shortdescription" cols="30" rows="3" maxlength="150" placeholder="z.B. Die Skybar ist ein wunderschönes Restaurant mit tollem Blick über Bonn. " required></textarea></div>
                 </div>
-                <div class="form-field">
-                    <label for="value"><a>Beschreibung</a></label>
-                        <textarea name="description" cols="30" rows="10"></textarea>
+                <div class="divider"></div>
+                <div id="descriptioncontainer">
+                    <div class="descriptionside">Füge deine Beschreibung hinzu</div>
+                    <div class="inputside"><textarea name="description" cols="30" rows="10" maxlength="150" placeholder="z.B. Die Skybar ist ein wunderschönes Restaurant mit tollem Blick über Bonn. Genieße hier die Zeit mit unseren einzigartigen Speisen und leckeren Cocktails. Bitte halten sie sich an die gültigen Coronaregeln..." required></textarea></div>
                 </div>
+                <div class="divider"></div>
+                <div id="imguploadcontainer">
+                    <div id="dragarea">
+                        <input id="fileinput" type="file" multiple>
+                        Lege deine Bilddateien hier ab oder klicke in diesen Bereich
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="openedcontainer">
+                    <div class="descriptionside">Öffnungszeiten</div>
+                    <div class="inputside">
+                        <input class="timeinput" name="fromtime" type="time" required>
+                        bis
+                        <input class="timeinput" name="totime" type="time" >
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="openedcontainer">
+                    <div class="descriptionside">Zeitraum</div>
+                    <div class="inputside">
+                        <input class="dateinput" name="fromdate" type="date" required>
+                        bis
+                        <input class="dateinput" name="todate" type="date" >
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="submit-field">
+                    <input type="submit" value="Weiter" />
+                    </div>
             </form>
         </div>
     </div>
     <div class="skylinediv"><img src="images\bonnskyline.png" alt="bonnskyline"></div>
     <div class="firstpageheader"><img src="images\verlaufswerkzeug.png" alt="verlauf"></div>
-    <div class="stadtplandiv"><img src="images\stadtplan.png" alt="stadtplan"></div>
+    
 </body>
 </html>
