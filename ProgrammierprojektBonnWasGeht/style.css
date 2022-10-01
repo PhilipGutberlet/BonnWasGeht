@@ -75,7 +75,7 @@ input[type="submit"]:hover {
 	color:#fff;
 }
 
-form input[type="value"], form select, form textarea {
+form input[type="value"], form select{
     margin: 2% 10% 0 10%; 
     padding:5%;
     display: block;
@@ -88,8 +88,7 @@ form input[type="value"], form select, form textarea {
 }
 
 #eventform input[type="text"], #eventform select, #eventform textarea {
-    margin: 2% 10% 0 0%; 
-    padding:5%;
+    
     display: block;
     border: none;
     border-bottom: 1px solid #dadada;
@@ -99,8 +98,8 @@ form input[type="value"], form select, form textarea {
     color: #5c5c5c;
 }
 #eventform input[type="time"], #eventform input[type="date"]{
-    margin: 0;
-    padding:5%;
+    margin-top: 1vh;
+    height: 6vh;
     display: block;
     border: none;
     border-bottom: 1px solid #dadada;
@@ -114,10 +113,15 @@ form input[type="value"], form select, form textarea {
 
 form input[type="text"]::placeholder,form input[type="time"]::placeholder, form textarea::placeholder{
     color: #dadada;
+    font-size: 1.4vh;
 }
 
 #userform input[type="value"]{
     color: #5c5c5c;
+}
+
+#userform{
+    z-index: 40;
 }
 
 input:focus[type="time"], input:focus[type="value"], input:focus[type="text"], select:focus, textarea:focus{
@@ -141,7 +145,7 @@ form p{
     margin: 5px;
     margin-top: 15px;
     font-family: 'Roboto';
-    font-size: 20px;
+    font-size: 1.8vh;
 }
 
 
@@ -393,15 +397,16 @@ form h2{
     }   
 
     .sec{
-        font-size: 60px;
+        font-size: 6vh;
+        
     }
 
     .ind{
-        font-size: 65px;
+        font-size: 6vh;
     }
     
     .css-3d-text-blue{
-        font-size: 55px;
+        font-size: 5vh;
         line-height: 110%; 
         color: #a4d0e6;
         font-family: Impact, Charcoal, sans-serif;
@@ -602,8 +607,7 @@ form h2{
     }
 
     #eventdatacontainer{
-        position: absolute;
-        background: white;
+        position: absolute;     
         z-index: 30;
         height: 80vh;
         right: 10vh;
@@ -617,6 +621,7 @@ form h2{
 
     #eventform{
         position: absolute;
+        text-align: center;
         width: 100%;
         height: 100%;
     }
@@ -626,6 +631,10 @@ form h2{
         width: 100%;
         height: 8vh;
     }
+
+    input[name="title"]{
+        height: 6vh;
+    }
     
     .descriptionside{
         font:left;
@@ -634,16 +643,18 @@ form h2{
         height: 100%;
         display: flex;
         align-items: top;
-        padding-left: 30px;
-        padding-top: 26px;
+        padding-left: 2vw;
+        padding-top: 2vh;
         color: #5c5c5c;
+        font-size: 1.4vh;
     }
 
     .inputside{
         float: right;
         width: 50%;
         height: 100%;
-        padding-right: 3%;
+        padding-right: 3vw;
+        font-size: 1.4vh;
     }
 
     .divider{
@@ -653,7 +664,7 @@ form h2{
     }
 
     #eventform p{
-        padding-bottom: 20px;
+        padding-bottom: 2vh;
     }
 
     #shortdescriptioncontainer{
@@ -663,12 +674,15 @@ form h2{
     }
 
     textarea[name="shortdescription"]{
+        margin-top: 1.5vh;
         resize: none;
+        height: 7vh;
     }
 
     textarea[name="description"]{
+        margin-top: 2vh;
         resize: none;
-        height: 14vh;
+        height: 16.5vh;
     }
 
     .inputside input, .inputside textarea{
@@ -695,6 +709,7 @@ form h2{
         display: flex;
         align-items: center;
         justify-content: center;
+        font-size: 1.6vh;
     }
 
     #fileinput{
@@ -705,6 +720,7 @@ form h2{
         height: 15vh;
         outline: none;
         opacity: 0;
+
     }
 
     .openedcontainer{
