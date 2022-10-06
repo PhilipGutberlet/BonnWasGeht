@@ -14,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index.js"></script>
 </head>
 <body>
     <div class="mainbox"><div class="css-3d-text-red sec">Mache dein <br> Event sichtbar <br> für andere!</div></div>
@@ -28,7 +30,7 @@
     <div class="header1"><a href="index.html"><img src="images\Bonnwasgeht.png"></a></div>
     <div id="eventdatacontainer" class="style-1">
         <div class="wrapper">
-            <form id="eventform">
+            <form id="eventform" onsubmit="postEventData()">
                 <div class="css-3d-text-blue">Event hochladen</div>
                 <p>Dazu einfach Formular ausfüllen </p>
                 <div class="divider"></div>
@@ -39,12 +41,12 @@
                 <div class="divider"></div>
                 <div id="shortdescriptioncontainer">
                     <div class="descriptionside">Füge eine kurze Beschreibung hinzu</div>
-                    <div class="inputside"><textarea name="shortdescription" cols="30" rows="3" maxlength="150" placeholder="z.B. Die Skybar ist ein wunderschönes Restaurant mit tollem Blick über Bonn. " required></textarea></div>
+                    <div class="inputside"><textarea id="shortdescription" name="shortdescription" cols="30" rows="3" maxlength="150" placeholder="z.B. Die Skybar ist ein wunderschönes Restaurant mit tollem Blick über Bonn. " required></textarea></div>
                 </div>
                 <div class="divider"></div>
                 <div id="descriptioncontainer">
                     <div class="descriptionside">Füge deine Beschreibung hinzu</div>
-                    <div class="inputside"><textarea name="description" cols="30" rows="10" maxlength="150" placeholder="z.B. Die Skybar ist ein wunderschönes Restaurant mit tollem Blick über Bonn. Genieße hier die Zeit mit unseren einzigartigen Speisen und leckeren Cocktails. Bitte halten sie sich an die gültigen Coronaregeln..." required></textarea></div>
+                    <div class="inputside"><textarea id="description" name="description" cols="30" rows="10" maxlength="150" placeholder="z.B. Die Skybar ist ein wunderschönes Restaurant mit tollem Blick über Bonn. Genieße hier die Zeit mit unseren einzigartigen Speisen und leckeren Cocktails. Bitte halten sie sich an die gültigen Coronaregeln..." required></textarea></div>
                 </div>
                 <div class="divider"></div>
                 <div id="imguploadcontainer">
@@ -57,18 +59,18 @@
                 <div class="openedcontainer">
                     <div class="descriptionside">Öffnungszeiten</div>
                     <div class="inputside">
-                        <input class="timeinput" name="fromtime" type="time" required>
+                        <input class="timeinput" id="opendAt" name="fromtime" type="time" required>
                         bis
-                        <input class="timeinput" name="totime" type="time" >
+                        <input class="timeinput" id="closedAt" name="totime" type="time" >
                     </div>
                 </div>
                 <div class="divider"></div>
                 <div class="openedcontainer">
                     <div class="descriptionside">Zeitraum</div>
                     <div class="inputside">
-                        <input class="dateinput" name="fromdate" type="date" required>
+                        <input class="dateinput" id="startdatum" name="fromdate" type="date" required>
                         bis
-                        <input class="dateinput" name="todate" type="date" >
+                        <input class="dateinput" id="enddatum" name="todate" type="date" >
                     </div>
                 </div>
                 <div class="divider"></div>
