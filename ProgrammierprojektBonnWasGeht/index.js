@@ -11,33 +11,51 @@ function loadsectionpage(){
 
 
 function postEventData(){
+    
+    let form = new FormData();
+
+    form.append('title', document.getElementById('title').value);
+    /*    for(var i=0; i < document.getElementById('fileinput').get[0].files.length(); i++){
+            form.append('files[]', $('.fileinput').get(0).files[i]);
+    }*/
+    form.append('shortdescription', document.getElementById('shortdescription').value);
+    form.append('description', document.getElementById('description').value);
+    form.append('startdatum', document.getElementById('startdatum').value);
+    form.append('enddatum', document.getElementById('enddatum').value);
+    form.append('opendAt', document.getElementById('opendAt').value);
+    form.append('closedAt', document.getElementById('closedAt').value);
+
+
+    for (var pair of form.entries()) {
+        console.log(pair[0]+ ', ' + pair[1]); 
+    }
+
+    
     $.ajax(
         {
             type: 'POST',
-            url:'nocjkeintevorhadnen',
+            url:'http://localhost:8080/events/addEvent',
             dataType: 'json',
-            data: {
-                title: document.getElementById('title').value,
-                picture:,
-                shortdescription: document.getElementById('shortdescription'),
-                description: document.getElementById('description').value,
-                startdatum: document.getElementById('startdatum').value,
-                enddatum: document.getElementById('enddatum').value,
-                opendAt: document.getElementById('opendAt').value,
-                closedAt: document.getElementById('closedAt').value
+            data: form,
+            crossDomain: true,
+            contentType: false,
+            processData: false,
+            succes: function(data){
+                console.log(data)
             }
         }
-    )
+    );
+    
 }
 
 function getEventList(){
     $ajax(
         {
             type: 'GET',
-            url:'nocjkeintevorhadnen',
+            url:'http://localhost:8080',
             dataType: 'json',
             succes: function(data){
-                
+
             }
         }
     )
