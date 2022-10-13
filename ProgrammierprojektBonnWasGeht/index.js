@@ -48,15 +48,55 @@ function postEventData(){
     
 }
 
+$(document).ready(getEventList);
 function getEventList(){
-    $ajax(
+    $.ajax(
         {
             type: 'GET',
-            url:'http://localhost:8080',
+            url:'http://localhost:8080/events/listevents',
             dataType: 'json',
-            succes: function(data){
+            crossDomain: true,
+            error: function(){console.log("Error")} ,
+            success: function(data){
+                //loop through Arraylist and get each Event
+                $.each(data, function(index, item){
+                    const{title, shortdescription, description, startdatum, enddatum, opendAt, closedAt} = item;
+                    var eventlist = document.getElementById('events'); //root
 
-            }
+                    var event = document.createElement("div");
+                    event.className = 'eventslot';
+                
+                    var eventimage = document.createElement("img");
+                    eventimage.src = "images/sectionrestaurant.png";
+                    eventimage.alt = "event";
+                    event.appendChild(eventimage);
+                
+                    var titelu = document.createElement("div");
+                    titelu.className='titelu';
+                    var titelspan = document.createElement("span");
+                    titelspan.innerHTML = title;
+                    var br = document.createElement("br");
+                    var desciption = document.createElement("p");
+                    desciption.innerHTML = shortdescription;
+                    titelu.appendChild(titelspan);
+                    titelu.appendChild(br);
+                    titelu.appendChild(desciption);
+                    event.appendChild(titelu);
+                
+                    var zeiten = document.createElement("div");
+                    zeiten.className = 'zeiten';
+                    var opentime = document.createElement("p");
+                    opentime.innerHTML = opendAt + "-" + closedAt;
+                    zeiten.appendChild(opentime);
+                    var period = document.createElement("p");
+                    period.innerHTML = "bis " + enddatum;
+                    zeiten.appendChild(period);
+                    event.appendChild(zeiten);
+                
+                
+                    eventlist.appendChild(event);
+                });
+            }         
         }
     )
 }

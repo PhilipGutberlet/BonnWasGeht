@@ -4,10 +4,8 @@ package com.springboot.bonnwasgeht;
 
 import org.springframework.util.MultiValueMap;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.ArrayList;
 import java.util.Map;
 
 public class EventList {
@@ -35,5 +33,40 @@ public class EventList {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+    }
+
+    public static ArrayList<Event> getEvents(){
+     try{
+        connection = DriverManager.getConnection(db_url, db_username, password);  //connection with database
+
+        statement = connection.createStatement();
+
+        //sql befehl
+        String sql = "SELECT * FROM Events ORDER BY EventID";
+
+        ResultSet resultset = statement.executeQuery(sql);
+
+        ArrayList<Event> EventList = new ArrayList<>();
+
+        //iterate throught Resultset
+        while(resultset.next()){
+            Event currentEvent = new Event();
+
+            currentEvent.setTitle(resultset.getString(2));
+            currentEvent.setShortdescription(resultset.getString(4));
+            currentEvent.setDescription(resultset.getString(5));
+            currentEvent.setStartdatum(resultset.getString(6));
+            currentEvent.setEnddatum(resultset.getString(7));
+            currentEvent.setOpendAt(resultset.getString(8));
+            currentEvent.setClosedAt(resultset.getString(9));
+
+            EventList.add(currentEvent);
+        }
+        return EventList;
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+     return null;
     }
 }
