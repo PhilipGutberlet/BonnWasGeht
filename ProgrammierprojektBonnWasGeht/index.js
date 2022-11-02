@@ -15,16 +15,16 @@ function postEventData(){
     let form = new FormData();
 
     form.append('title', document.getElementById('title').value);
-    /*    for(var i=0; i < document.getElementById('fileinput').get[0].files.length(); i++){
-            form.append('files[]', $('.fileinput').get(0).files[i]);
-    }*/
+    //for(var i=0; i < document.getElementById('fileinput').files.length(); i++){
+    //    form.append('files[]', document.getElementById('fileinput').files[i]);
+    //}
     form.append('shortdescription', document.getElementById('shortdescription').value);
     form.append('description', document.getElementById('description').value);
     form.append('startdatum', document.getElementById('startdatum').value);
     form.append('enddatum', document.getElementById('enddatum').value);
     form.append('opendAt', document.getElementById('opendAt').value);
     form.append('closedAt', document.getElementById('closedAt').value);
-
+    form.append('picture', document.getElementById('fileinput').files[0]);
 
     for (var pair of form.entries()) {
         console.log(pair[0]+ ', ' + pair[1]); 
@@ -60,17 +60,22 @@ function getEventList(){
             success: function(data){
                 //loop through Arraylist and get each Event
                 $.each(data, function(index, item){
-                    const{title, shortdescription, description, startdatum, enddatum, opendAt, closedAt} = item;
+                    const{title, picturename, shortdescription, description, startdatum, enddatum, opendAt, closedAt, bytearray} = item;
                     var eventlist = document.getElementById('events'); //root
 
                     var event = document.createElement("div");
                     event.className = 'eventslot';
                 
                     var eventimage = document.createElement("img");
-                    eventimage.src = "images/sectionrestaurant.png";
+                                      
+                    eventimage.src = 'data:image/png;base64,'+bytearray;
                     eventimage.alt = "event";
                     event.appendChild(eventimage);
-                
+
+                    
+                    
+                    
+                            
                     var titelu = document.createElement("div");
                     titelu.className='titelu';
                     var titelspan = document.createElement("span");

@@ -1,7 +1,15 @@
 package com.springboot.bonnwasgeht;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.util.MultiValueMap;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 
+import javax.persistence.Lob;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -9,12 +17,16 @@ import java.util.Set;
 
 public class Event{
     private String title;
+    private String picturename;
     private String shortdescription;
     private String description;
     private String startdatum;
     private String enddatum;
     private String opendAt;
     private String closedAt;
+    private byte[] bytearray;
+
+
 
     public String getTitle() {
         return title;
@@ -70,5 +82,21 @@ public class Event{
 
     public void setClosedAt(String closedAt) {
         this.closedAt = closedAt;
+    }
+
+    public String getPicturename() {
+        return picturename;
+    }
+
+    public void setPicturename(String picturename) {
+        this.picturename = picturename;
+    }
+
+    public byte[] getBytearray() {
+        return bytearray;
+    }
+
+    public void setBytearray(byte[] bytearray) {
+        this.bytearray = bytearray;
     }
 }
