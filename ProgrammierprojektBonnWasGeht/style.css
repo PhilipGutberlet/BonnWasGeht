@@ -168,57 +168,11 @@ form h2{
 
 
 @media only screen and (max-width: 900px) {
-.header1{
-    display:none;
-}
 
-.firstpageheader{
-    display: none;
-}
-.header{
-    position: absolute;
-    width: 100%;
-    height: 15vh;
-    background-color: #a4d0e6;
-    text-align: center;
-    padding:5px 0px 5px 0px;
-    top:0;
-}
+    body{
+        display: none;
+    }
 
-#userdatacontainer{
-    position: absolute;
-    top: 15vh;
-    padding-left: 100%;
-}
-
-.leftside, .designleft{
-    display: none;
-    
-}
-
-.header img{
-    padding: 2.5vh;
-    height: 65%;
-}
-
-.foot{
-    height: 15vh;
-    width: 100%;
-    background-color: #a4d0e6;
-    position:absolute;
-    bottom: 0;
-}
-
-.height {
-    height: 100px;
-    width: 100%;
-}
-.skylinediv{
-    display: none;
-}
-.stadtplandiv{
-    display: none;
-}
 }
 
 @media only screen and (min-width: 900px) {
@@ -394,6 +348,10 @@ form h2{
         
     }
 
+    .evs{
+        font-size: 8vh;
+    }
+
     .ind{
         font-size: 6vh;
     }
@@ -425,87 +383,6 @@ form h2{
 
     
 
-    /*
-    .higherhalf{
-        position: absolute;
-        height: 50%;
-        width: 100%;
-        top: 0;
-    }
-
-    .lowerhalf{
-        position: absolute;
-        height: 50%;
-        width: 100%;
-        bottom: 0;
-    }
-
-    .righthalf{
-        position: absolute;
-        display: flex;
-        align-items: center;
-        width: 50%; 
-        height: 100%;
-        right: 0;
-    }
-
-    .lefthalf{
-        position: absolute;
-        display: flex;
-        align-items: center;
-        width: 50%;
-        height: 100%;
-        left: 0;
-    }
-
-    .lefthalf div{
-        display: flex;
-        background-color: white;
-        margin: 10% 0% 10% 0;
-        left: 0;
-        right: 10px;
-        height: 80%;
-        width: 100%;
-        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    }
-
-    .lefthalf div a div{
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        height: 100%;
-    }
-
-    .righthalf div{
-        display: flex;
-        justify-content: space-between;
-        background-color: white;
-        margin: 10% 0% 10% 0%;
-        align-items: center;
-        left: 10px;
-        height: 80%; 
-        width: 100%;
-        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    }
-
-    .righthalf div a div{
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    img[alt="restaurant"],img[alt="feiern"],img[alt="kultur"],img[alt="sport"]{
-        max-height: 90%;
-        left: 0;
-        margin: 1vh;
-    }
-
-    .lefthalf div a, .righthalf div a{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-    */
     #events{
         position: absolute;
         justify-self: end;
@@ -572,6 +449,7 @@ form h2{
         font-size: 3.5vh;
         white-space: nowrap;
         margin-top: 0.6vh;
+        color: black;
     }
 
     .titelu p{
@@ -903,7 +781,73 @@ form h2{
         width: 16px;
         height: 2px;
         bottom: 10px;
-        background: currentColor
+        background: currentColor;
+    }
+
+
+    .aligncontainer2{
+        position: absolute;
+        z-index: 30;
+        display: flex;
+        justify-self: center;
+        justify-content: center;
+        width: 65vw;
+        right: 17.5vw;
+        height: 100%;
+    }
+
+    #presentedevent{
+        position: absolute;
+        width: 100%;
+        height: 79vh;
+        bottom: 10vh;
+    }
+
+    .eventname{
+        text-align: center;
+        margin-bottom: 5vh;
+    }
+
+    .eventpicturebar{
+        display: flex;
+        flex-direction: row;
+        overflow: auto;
+        width: 100%;
+        justify-content: space-around;
+        margin-bottom: 2vh;
+    }
+
+    .eventpicturebar::-webkit-scrollbar{
+        width: 0;
+    }
+
+    img[alt="eventbar"]{
+        height: 25vh;
+        margin: 0.75vh;
+        float:left;
+    }
+
+    .eventdescription{
+        text-align: center;
+        margin-left: 7%;
+        margin-right: 7%;
+        height: 100%;
+        padding: 1.5vh;
+        font-family: 'Roboto';
+        color: #747474;
+        font-size: 2.5vh;
+    }
+
+    #presentedevent div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .buttoncon{
+        width: 100%;
+        height: 7vh;
+        margin-top: 2.2vh;
     }
 }
 
