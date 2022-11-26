@@ -18,6 +18,6 @@ class BonnwasgehtApplicationTests {
 
 	@Test
 	void convertDateTest(){
-		assertEquals(EventList.convertDate("2020-05-10"),"bis 10. Mai");
+		assertEquals(EventList.convertDate("2020-05-10"),"10. Mai");
 	}
 }

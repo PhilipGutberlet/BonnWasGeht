@@ -25,6 +25,7 @@ function postEventData(){
     form.append('opendAt', document.getElementById('opendAt').value);
     form.append('closedAt', document.getElementById('closedAt').value);
     form.append('picture', document.getElementById('fileinput').files[0]);
+    form.append('section', document.getElementById('section').value);
 
     for (var pair of form.entries()) {
         console.log(pair[0]+ ', ' + pair[1]); 
@@ -48,7 +49,7 @@ function postEventData(){
     
 }
 
-$(document).ready(getEventList);
+//$(document).ready(getEventList);
 function getEventList(){
     $.ajax(
         {
@@ -60,8 +61,12 @@ function getEventList(){
             success: function(data){
                 //loop through Arraylist and get each Event
                 $.each(data, function(index, item){
-                    const{title, picturename, shortdescription, description, startdatum, enddatum, opendAt, closedAt, bytearray} = item;
+                    const{eventID, title, picturename, shortdescription, description, startdatum, enddatum, opendAt, closedAt, bytearray} = item;
+                  
                     var eventlist = document.getElementById('events'); //root
+
+                    var link = document.createElement("a");
+                    link.href = "eventside.html?EventID="+eventID;
 
                     var event = document.createElement("div");
                     event.className = 'eventslot';
@@ -72,8 +77,6 @@ function getEventList(){
                     eventimage.alt = "event";
                     event.appendChild(eventimage);
 
-                    
-                    
                     
                             
                     var titelu = document.createElement("div");
@@ -98,9 +101,67 @@ function getEventList(){
                     zeiten.appendChild(period);
                     event.appendChild(zeiten);
                 
-                
-                    eventlist.appendChild(event);
+                    link.appendChild(event);
+                    eventlist.appendChild(link);
                 });
+            }         
+        }
+    )
+}
+
+function getUrlParam(EventID) {
+    var url_string = window.location;
+    var url = new URL(url_string);
+    var c = url.searchParams.get(EventID);
+    return c;
+}
+
+function getEvent(){
+    $.ajax(
+        {
+            type: 'GET',
+            url:'http://localhost:8080/events/getEvent',
+            dataType: 'json',
+            data: {'EventID': getUrlParam("EventID")},
+            crossDomain: true,
+            error: function(){console.log("Error")} ,
+            success: function(data){
+                const{title, picturename, description, bytearray} = data;
+                var presentedevent = document.getElementById('presentedevent');   
+                
+                var eventname = document.createElement("div");
+                eventname.className = 'eventname';
+                var eventtitle = document.createElement("div");
+                eventtitle.className = 'css-3d-text-red evs';
+                eventtitle.innerHTML=title;
+                eventname.appendChild(eventtitle);
+                presentedevent.appendChild(eventname);
+
+                var picturebar = document.createElement("div");
+                picturebar.className = 'eventpicturebar';
+                var image = document.createElement("img");
+                image.src = 'data:image/png;base64,'+bytearray;
+                image.alt = "event";
+                picturebar.appendChild(image);
+                presentedevent.appendChild(picturebar);
+
+                var div = document.createElement("div");
+                var eventdescription = document.createElement("div");
+                eventdescription.className = 'eventdescription';
+                eventdescription.innerHTML=description;
+                div.appendChild(eventdescription);
+                presentedevent.appendChild(div);
+
+                var buttoncon = document.createElement("div");
+                buttoncon.className = 'buttoncon';
+                var href = document.createElement("a");
+                href.href = "eventlist.html";
+                buttoncon.appendChild(href);
+                var submit = document.createElement("input");
+                submit.type = "submit";
+                submit.value = "Zurück";
+                href.appendChild(submit);
+                presentedevent.appendChild(buttoncon);
             }         
         }
     )

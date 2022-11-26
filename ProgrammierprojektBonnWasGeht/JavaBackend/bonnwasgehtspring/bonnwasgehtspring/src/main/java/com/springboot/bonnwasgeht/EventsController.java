@@ -36,6 +36,13 @@ public class EventsController{
         ArrayList<Event> eventlist = EventList.getEvents();
         return eventlist;
     }
+
+    @CrossOrigin(origins = "http://127.0.0.1:5500")
+    @RequestMapping(value="/getEvent", method = RequestMethod.GET)
+    public Event getEvent(@RequestParam int EventID){
+        Event event = EventList.getEvent(EventID);
+        return event;
+    }
 }
 
 

@@ -16,6 +16,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class Event{
+    private int EventID;
     private String title;
     private String picturename;
     private String shortdescription;
@@ -25,8 +26,16 @@ public class Event{
     private String opendAt;
     private String closedAt;
     private byte[] bytearray;
+    private String section;
 
 
+    public int getEventID() {
+        return EventID;
+    }
+
+    public void setEventID(int eventID) {
+        EventID = eventID;
+    }
 
     public String getTitle() {
         return title;
@@ -99,4 +108,14 @@ public class Event{
     public void setBytearray(byte[] bytearray) {
         this.bytearray = bytearray;
     }
+
+    public String getSection() {
+        return section;
+    }
+
+    public void setSection(String section) {
+        this.section = section;
+    }
+
+
 }
