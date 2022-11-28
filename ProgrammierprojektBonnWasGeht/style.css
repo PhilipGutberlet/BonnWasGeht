@@ -743,7 +743,7 @@ form h2{
         margin-left: 1.2vw;
         margin-right: 0.8vw;
         margin-top: 0.5vw;
-        overflow: hidden;
+        overflow:visible;
     }
 
     .sectiondescription span{

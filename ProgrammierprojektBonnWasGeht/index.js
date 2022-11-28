@@ -141,8 +141,23 @@ function getEvent(){
                 picturebar.className = 'eventpicturebar';
                 var image = document.createElement("img");
                 image.src = 'data:image/png;base64,'+bytearray;
-                image.alt = "event";
+                image.alt = "eventbar";
                 picturebar.appendChild(image);
+                
+                var image1 = document.createElement("img");
+                image1.src = 'data:image/png;base64,'+bytearray;
+                image1.alt = "eventbar";
+                picturebar.appendChild(image1);
+
+                var image2 = document.createElement("img");
+                image2.src = 'data:image/png;base64,'+bytearray;
+                image2.alt = "eventbar";
+                picturebar.appendChild(image2);
+
+                var image3 = document.createElement("img");
+                image3.src = 'data:image/png;base64,'+bytearray;
+                image3.alt = "eventbar";
+                picturebar.appendChild(image3);
                 presentedevent.appendChild(picturebar);
 
                 var div = document.createElement("div");
